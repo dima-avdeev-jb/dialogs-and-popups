@@ -143,6 +143,11 @@ fun PopupSample() {
 fun DialogSample() {
     ProvideDensityAndLayoutDirection {
         var shown: Boolean by remember { mutableStateOf(true) }
+        Button(onClick = {
+            shown = true
+        }) {
+            Text("Open Dialog")
+        }
         if (shown) {
             Dialog(
                 onDismissRequest = {
@@ -209,7 +214,7 @@ fun DropdownSample() {
 
 @Composable
 fun ProvideDensityAndLayoutDirection(content: @Composable () -> Unit) {
-    var provideDensity by remember { mutableStateOf(true) }
+    var provideDensity by remember { mutableStateOf(false) }
     Column {
         Checkbox(provideDensity, { provideDensity = it })
         Text("provideDensity")
