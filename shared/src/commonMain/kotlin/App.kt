@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBars
@@ -33,7 +34,7 @@ import org.jetbrains.compose.resources.painterResource
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun App() {
-    Column(Modifier.windowInsetsPadding(WindowInsets.systemBars)) {
+    Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.systemBars)) {
         CompositionLocalProvider(
             LocalDensity provides Density(1f, 1f),//todo it doesn't works
             LocalLayoutDirection provides LayoutDirection.Rtl,
