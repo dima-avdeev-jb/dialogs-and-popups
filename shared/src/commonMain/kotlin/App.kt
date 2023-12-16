@@ -44,7 +44,7 @@ fun App() {
 //                    LocalLayoutDirection provides LayoutDirection.Rtl,
                 ) {
                     Column(Modifier.background(Color.Blue.copy(alpha = 0.7f))) {
-                        Text("I am Popup")
+                        Text("I am Popup", color = Color.White)
                         Image(
                             painter = painterResource(res = "compose-multiplatform.xml"),
                             contentDescription = null,
